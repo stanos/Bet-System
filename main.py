@@ -1,16 +1,16 @@
-SLOT_PRICE = 10
+SLOT_MACHINE_PRICE = 10
 
 class slot_machine:
     def __init__(self, balance) -> None:
         self.balance = balance
-        if self.balance < SLOT_PRICE:
+        if self.balance < SLOT_MACHINE_PRICE:
             self.can_gamble = False
         else:
             self.can_gamble = True
 
     def gamble(self):
         if self.can_gamble:
-            self.after_balance = self.balance - SLOT_PRICE
+            self.after_balance = self.balance - SLOT_MACHINE_PRICE
             print(f"slot gamble. {self.after_balance}")
             return self.after_balance
         else:
